@@ -32,7 +32,7 @@ const CardFacts = () => {
 
   const MyCard = ({ onTouchCard }) => {
     return (
-      <SafeAreaView>
+      <SafeAreaView>0
         <TouchableOpacity onPress={onTouchCard}>
           <View style={style.cardContainer}>
             {/* Mostrar o fato e o comprimento no texto */}

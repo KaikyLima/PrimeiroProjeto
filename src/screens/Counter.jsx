@@ -19,28 +19,21 @@ const Counter = () => {
 
     const [contador, setContador] = useState(0)
 
-  useEffect(() => {
-    console.log('montagem')
-  },[])
-
-  useEffect(() => {
-    console.log('Atualizado')
-  },[contador])
   
-  const onPressButton = () =>{
-    setContador(contador + 2)
-  }
-
-  const onPressButtonMenos = () => {
-    setContador(contador-3)
-  }
+    const onPressButton = () =>{
+      setContador(contador => contador + 1) 
+    }
+    
+    const onPressButtonMenos = () => {
+      setContador(contador => contador - 1) 
+    }
 
   return (
     <SafeAreaView style={style.container}>
       <Text style={style.text}>{contador}</Text>
       
-      <Button title='SOMADOR +2' onPress={onPressButton} />
-      <Button title='DECREMENTADOR -3' onPress={onPressButtonMenos} />
+      <Button title='Decrementar +1' onPress={onPressButton} />
+      <Button title='Incrementar -1' onPress={onPressButtonMenos} />
 
     </SafeAreaView>
   );

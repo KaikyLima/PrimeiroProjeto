@@ -1,12 +1,11 @@
 import React from 'react';
-import CatFacts from './src/screens/CatFacts';
-import CardFacts from './src/components/CardFacts';
-import Universities from './src/components/Universities';
+import { View, StyleSheet } from 'react-native';
+import ListPage from './src/screens/ListPage';
 
-export default function App() {
-
-  
+const App = () => {
   return (
-    <Universities/>
+      <ListPage />
   );
-}
+};
+
+export default App;
